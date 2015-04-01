@@ -1,5 +1,5 @@
 {
-    "name" : "louis94/kayue-wordpress-bundle",
+    "name" : "louis94/wordpress-bundle",
     "description" : "A demo bundle",
     "type" : "symfony-bundle",
     "authors" : [{
