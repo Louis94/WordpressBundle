@@ -16,15 +16,15 @@
     },
     "autoload" : {
         "psr-0" : {
-            "Louis94\\WordpressBundle" : ""
+            "Kayue\\WordpressBundle" : ""
         }
     },
-    "target-dir" : "Louis94/WordpressBundle",
+    "target-dir" : "Kayue/WordpressBundle",
     "repositories" : [{
     }],
     "extra" : {
     "branch-alias" : {
-            "dev-master" : "1.2.1-dev"
+            "dev-master" : "1.0.x-dev"
         }
     }
 }
