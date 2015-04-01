@@ -1,0 +1,52 @@
+{
+    "name": "louis94/kayue-wordpress-bundle",
+    "type": "symfony-bundle",
+    "description": "Support for authenticating WordPress users in Symfony2 Test.",
+    "keywords":    [
+        "test bundle"
+    ],
+    "homepage": "http://github.com/louis94/KayueWordpressBundle",
+    "license": "MIT",
+
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": ">=2.1",
+        "doctrine/orm": "~2.2,>=2.2.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Kayue\\WordpressBundle": ""
+        }
+    },
+    "target-dir": "Kayue/WordpressBundle"
+}
+{
+    "name" : "louis94/kayue-wordpress-bundle",
+    "description" : "A demo bundle",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "demo",
+        "email" : "demo@company.com"
+    }],
+    "keywords" : [
+        "demo bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Louis94\\WordpressBundle" : ""
+        }
+    },
+    "target-dir" : "Louis94/WordpressBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "1.2.1-dev"
+        }
+    }
+}
