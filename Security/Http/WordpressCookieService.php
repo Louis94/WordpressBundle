@@ -131,12 +131,12 @@ class WordpressCookieService
             if ($hmac !== $this->generateHmac($username, $expiration, $user->getPassword())) {
                 throw new AuthenticationException('The WordPress cookie\'s hash is invalid.');
             }
-        }elseif(count($cookieParts) ){
-            if ($hmac !== $this->generateHmacWithToken($username, $expiration, $token, $user->getPassword()) {
+        }elseif( count($cookieParts) ){
+            if ($hmac !== $this->generateHmacWithToken($username, $expiration, $token, $user->getPassword())) {
                 throw new AuthenticationException('The Wordpress cookie\'s hash is invalid.');
             }
         }
-        
+
         if ($expiration < time()) {
             throw new AuthenticationException('The WordPress cookie has expired.');
         }
