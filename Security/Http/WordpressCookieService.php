@@ -127,17 +127,16 @@ class WordpressCookieService
         if (!$user instanceof UserInterface) {
             throw new \RuntimeException(sprintf('The UserProviderInterface implementation must return an instance of UserInterface, but returned "%s".', get_class($user)));
         }
-
-        // if ($hmac !== $this->generateHmac($username, $expiration, $user->getPassword())) {
-        //     throw new AuthenticationException('The WordPress cookie\'s hash is invalid.');
-        // }
-
-        $hash = $this->generateHmacWithToken($username, $expiration, $token, $user->getPassword());
-
-        if ($hmac !== $hash) {
-            throw new AuthenticationException('The Wordpress cookie\'s hash is invalid.');
+        if(count($cookieParts) == 3){
+            if ($hmac !== $this->generateHmac($username, $expiration, $user->getPassword())) {
+                throw new AuthenticationException('The WordPress cookie\'s hash is invalid.');
+            }
+        }elseif(count($cookieParts) ){
+            if ($hmac !== $this->generateHmacWithToken($username, $expiration, $token, $user->getPassword()) {
+                throw new AuthenticationException('The Wordpress cookie\'s hash is invalid.');
+            }
         }
-
+        
         if ($expiration < time()) {
             throw new AuthenticationException('The WordPress cookie has expired.');
         }
